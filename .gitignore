@@ -1,0 +1,19 @@
+# xcode noise
+build/*
+DerivedData
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.tmproj
+*.swp
+*.tm_build_errors
+*.xcworkspace
+xcuserdata
+
+# AppCode
+.idea
+
+# osx noise
+.DS_Store
+profile

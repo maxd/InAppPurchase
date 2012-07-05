@@ -6,17 +6,67 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		093E1C2A15A6086700D5538A /* Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 093E1C2B15A6086700D5538A /* Build configuration list for PBXAggregateTarget "Framework" */;
+			buildPhases = (
+				093E1C3015A6088F00D5538A /* ShellScript */,
+			);
+			dependencies = (
+				093E1C2F15A6087200D5538A /* PBXTargetDependency */,
+			);
+			name = Framework;
+			productName = Framework;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		093E1BFB15A5EE7F00D5538A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093E1BFA15A5EE7F00D5538A /* Foundation.framework */; };
-		093E1C0115A5EE7F00D5538A /* InAppPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 093E1C0015A5EE7F00D5538A /* InAppPurchase.m */; };
+		093E1C1015A5FA3700D5538A /* AlertViewAlertHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 093E1C0715A5FA3700D5538A /* AlertViewAlertHandler.m */; };
+		093E1C1115A5FA3700D5538A /* InAppPurchaseAlertHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C0815A5FA3700D5538A /* InAppPurchaseAlertHandler.h */; };
+		093E1C1215A5FA3700D5538A /* InAppPurchaseManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C0915A5FA3700D5538A /* InAppPurchaseManager.h */; };
+		093E1C1315A5FA3700D5538A /* InAppPurchaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 093E1C0A15A5FA3700D5538A /* InAppPurchaseManager.m */; };
+		093E1C1415A5FA3700D5538A /* NSLog+InAppPurchase.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C0B15A5FA3700D5538A /* NSLog+InAppPurchase.h */; };
+		093E1C1515A5FA3700D5538A /* SKProduct+LocalizedPrice.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C0C15A5FA3700D5538A /* SKProduct+LocalizedPrice.h */; };
+		093E1C1615A5FA3700D5538A /* SKProduct+LocalizedPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 093E1C0D15A5FA3700D5538A /* SKProduct+LocalizedPrice.m */; };
+		093E1C1715A5FA3700D5538A /* UserDefaultsProductActivator.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C0E15A5FA3700D5538A /* UserDefaultsProductActivator.h */; };
+		093E1C1815A5FA3700D5538A /* UserDefaultsProductActivator.m in Sources */ = {isa = PBXBuildFile; fileRef = 093E1C0F15A5FA3700D5538A /* UserDefaultsProductActivator.m */; };
+		093E1C1B15A5FA7C00D5538A /* AlertViewAlertHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C1A15A5FA7C00D5538A /* AlertViewAlertHandler.h */; };
+		093E1C1D15A5FADC00D5538A /* ProductActivator.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C1C15A5FADC00D5538A /* ProductActivator.h */; };
+		093E1C2115A5FB5800D5538A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093E1C2015A5FB5800D5538A /* UIKit.framework */; };
+		093E1C2615A5FDFD00D5538A /* InAppPurchase.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C2515A5FDFD00D5538A /* InAppPurchase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		093E1C2915A6066900D5538A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093E1C2815A6066900D5538A /* StoreKit.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		093E1C2E15A6087200D5538A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 093E1BEE15A5EE7F00D5538A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 093E1BF615A5EE7F00D5538A;
+			remoteInfo = InAppPurchase;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		093E1BF715A5EE7F00D5538A /* libInAppPurchase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libInAppPurchase.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		093E1BFA15A5EE7F00D5538A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		093E1BFE15A5EE7F00D5538A /* InAppPurchase-Prefix.pch */ = {isa = PBXFileReference; path = "InAppPurchase-Prefix.pch"; sourceTree = "<group>"; };
-		093E1BFF15A5EE7F00D5538A /* InAppPurchase.h */ = {isa = PBXFileReference; path = InAppPurchase.h; sourceTree = "<group>"; };
-		093E1C0015A5EE7F00D5538A /* InAppPurchase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InAppPurchase.m; sourceTree = "<group>"; };
+		093E1BFE15A5EE7F00D5538A /* InAppPurchase-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InAppPurchase-Prefix.pch"; sourceTree = "<group>"; };
+		093E1C0715A5FA3700D5538A /* AlertViewAlertHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewAlertHandler.m; sourceTree = "<group>"; };
+		093E1C0815A5FA3700D5538A /* InAppPurchaseAlertHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPurchaseAlertHandler.h; sourceTree = "<group>"; };
+		093E1C0915A5FA3700D5538A /* InAppPurchaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPurchaseManager.h; sourceTree = "<group>"; };
+		093E1C0A15A5FA3700D5538A /* InAppPurchaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppPurchaseManager.m; sourceTree = "<group>"; };
+		093E1C0B15A5FA3700D5538A /* NSLog+InAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLog+InAppPurchase.h"; sourceTree = "<group>"; };
+		093E1C0C15A5FA3700D5538A /* SKProduct+LocalizedPrice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKProduct+LocalizedPrice.h"; sourceTree = "<group>"; };
+		093E1C0D15A5FA3700D5538A /* SKProduct+LocalizedPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKProduct+LocalizedPrice.m"; sourceTree = "<group>"; };
+		093E1C0E15A5FA3700D5538A /* UserDefaultsProductActivator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsProductActivator.h; sourceTree = "<group>"; };
+		093E1C0F15A5FA3700D5538A /* UserDefaultsProductActivator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsProductActivator.m; sourceTree = "<group>"; };
+		093E1C1A15A5FA7C00D5538A /* AlertViewAlertHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewAlertHandler.h; sourceTree = "<group>"; };
+		093E1C1C15A5FADC00D5538A /* ProductActivator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductActivator.h; sourceTree = "<group>"; };
+		093E1C2015A5FB5800D5538A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		093E1C2515A5FDFD00D5538A /* InAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InAppPurchase.h; path = InAppPurchase/InAppPurchase.h; sourceTree = "<group>"; };
+		093E1C2815A6066900D5538A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,7 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				093E1C2915A6066900D5538A /* StoreKit.framework in Frameworks */,
 				093E1BFB15A5EE7F00D5538A /* Foundation.framework in Frameworks */,
+				093E1C2115A5FB5800D5538A /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				093E1BFA15A5EE7F00D5538A /* Foundation.framework */,
+				093E1C2015A5FB5800D5538A /* UIKit.framework */,
+				093E1C2815A6066900D5538A /* StoreKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -59,8 +113,13 @@
 		093E1BFC15A5EE7F00D5538A /* InAppPurchase */ = {
 			isa = PBXGroup;
 			children = (
-				093E1BFF15A5EE7F00D5538A /* InAppPurchase.h */,
-				093E1C0015A5EE7F00D5538A /* InAppPurchase.m */,
+				093E1C0915A5FA3700D5538A /* InAppPurchaseManager.h */,
+				093E1C0A15A5FA3700D5538A /* InAppPurchaseManager.m */,
+				093E1C1C15A5FADC00D5538A /* ProductActivator.h */,
+				093E1C0815A5FA3700D5538A /* InAppPurchaseAlertHandler.h */,
+				093E1C1F15A5FB1100D5538A /* ProductActivators */,
+				093E1C1E15A5FAFE00D5538A /* Alerts */,
+				093E1C1915A5FA4400D5538A /* Helpers */,
 				093E1BFD15A5EE7F00D5538A /* Supporting Files */,
 			);
 			path = InAppPurchase;
@@ -69,9 +128,38 @@
 		093E1BFD15A5EE7F00D5538A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				093E1C2515A5FDFD00D5538A /* InAppPurchase.h */,
 				093E1BFE15A5EE7F00D5538A /* InAppPurchase-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		093E1C1915A5FA4400D5538A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				093E1C0B15A5FA3700D5538A /* NSLog+InAppPurchase.h */,
+				093E1C0C15A5FA3700D5538A /* SKProduct+LocalizedPrice.h */,
+				093E1C0D15A5FA3700D5538A /* SKProduct+LocalizedPrice.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		093E1C1E15A5FAFE00D5538A /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				093E1C1A15A5FA7C00D5538A /* AlertViewAlertHandler.h */,
+				093E1C0715A5FA3700D5538A /* AlertViewAlertHandler.m */,
+			);
+			name = Alerts;
+			sourceTree = "<group>";
+		};
+		093E1C1F15A5FB1100D5538A /* ProductActivators */ = {
+			isa = PBXGroup;
+			children = (
+				093E1C0E15A5FA3700D5538A /* UserDefaultsProductActivator.h */,
+				093E1C0F15A5FA3700D5538A /* UserDefaultsProductActivator.m */,
+			);
+			name = ProductActivators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -81,6 +169,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				093E1C2615A5FDFD00D5538A /* InAppPurchase.h in Headers */,
+				093E1C1115A5FA3700D5538A /* InAppPurchaseAlertHandler.h in Headers */,
+				093E1C1215A5FA3700D5538A /* InAppPurchaseManager.h in Headers */,
+				093E1C1415A5FA3700D5538A /* NSLog+InAppPurchase.h in Headers */,
+				093E1C1515A5FA3700D5538A /* SKProduct+LocalizedPrice.h in Headers */,
+				093E1C1715A5FA3700D5538A /* UserDefaultsProductActivator.h in Headers */,
+				093E1C1B15A5FA7C00D5538A /* AlertViewAlertHandler.h in Headers */,
+				093E1C1D15A5FADC00D5538A /* ProductActivator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +190,7 @@
 				093E1BF315A5EE7F00D5538A /* Sources */,
 				093E1BF415A5EE7F00D5538A /* Frameworks */,
 				093E1BF515A5EE7F00D5538A /* Headers */,
+				093E1C2715A5FEBB00D5538A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -111,7 +208,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
-				ORGANIZATIONNAME = "Studio Mobile";
+				ORGANIZATIONNAME = Protonail;
 			};
 			buildConfigurationList = 093E1BF115A5EE7F00D5538A /* Build configuration list for PBXProject "InAppPurchase" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -126,20 +223,61 @@
 			projectRoot = "";
 			targets = (
 				093E1BF615A5EE7F00D5538A /* InAppPurchase */,
+				093E1C2A15A6086700D5538A /* Framework */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		093E1C2715A5FEBB00D5538A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n\n# Link the \"Current\" version to \"A\"\n/bin/ln -sfh A \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n";
+		};
+		093E1C3015A6088F00D5538A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\n\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\n    exit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    SF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    SF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    SF_OTHER_PLATFORM=iphonesimulator\nelse\n    SF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\n    SF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n# Build the other platform.\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nlipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		093E1BF315A5EE7F00D5538A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				093E1C0115A5EE7F00D5538A /* InAppPurchase.m in Sources */,
+				093E1C1015A5FA3700D5538A /* AlertViewAlertHandler.m in Sources */,
+				093E1C1315A5FA3700D5538A /* InAppPurchaseManager.m in Sources */,
+				093E1C1615A5FA3700D5538A /* SKProduct+LocalizedPrice.m in Sources */,
+				093E1C1815A5FA3700D5538A /* UserDefaultsProductActivator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		093E1C2F15A6087200D5538A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 093E1BF615A5EE7F00D5538A /* InAppPurchase */;
+			targetProxy = 093E1C2E15A6087200D5538A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		093E1C0215A5EE7F00D5538A /* Debug */ = {
@@ -149,6 +287,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -162,7 +301,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)/InAppPurchase";
 				SDKROOT = iphoneos;
+				STRIP_STYLE = "non-global";
 			};
 			name = Debug;
 		};
@@ -172,14 +313,17 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)/InAppPurchase";
 				SDKROOT = iphoneos;
+				STRIP_STYLE = "non-global";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -208,6 +352,20 @@
 			};
 			name = Release;
 		};
+		093E1C2C15A6086700D5538A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		093E1C2D15A6086700D5538A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -225,6 +383,14 @@
 			buildConfigurations = (
 				093E1C0515A5EE7F00D5538A /* Debug */,
 				093E1C0615A5EE7F00D5538A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		093E1C2B15A6086700D5538A /* Build configuration list for PBXAggregateTarget "Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				093E1C2C15A6086700D5538A /* Debug */,
+				093E1C2D15A6086700D5538A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
