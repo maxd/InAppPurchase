@@ -1,6 +1,6 @@
 #import <StoreKit/StoreKit.h>
 #import "InAppPurchaseManager.h"
-#import "ProductActivator.h"
+#import "InAppPurchaseProductActivator.h"
 #import "InAppPurchaseAlertHandler.h"
 #import "AlertViewAlertHandler.h"
 
@@ -31,18 +31,18 @@
     return self;
 }
 
-- (void)addProductActivator:(id <ProductActivator>)productActivator {
+- (void)addProductActivator:(id <InAppPurchaseProductActivator>)productActivator {
     [productActivators addObject:productActivator];
 }
 
-- (void)removeProductActivator:(id <ProductActivator>)productActivator {
+- (void)removeProductActivator:(id <InAppPurchaseProductActivator>)productActivator {
     [productActivators removeObject:productActivator];
 }
 
 - (void)updateProducts {
     NSMutableSet *productIdentifiers = [NSMutableSet new];
 
-    for (id<ProductActivator> purchaseActivator in productActivators) {
+    for (id<InAppPurchaseProductActivator> purchaseActivator in productActivators) {
         [productIdentifiers addObject:purchaseActivator.productIdentifier];
     }
 
@@ -149,7 +149,7 @@
     [self finishTransaction:transaction wasSuccessful:NO];
 }
 
-- (id <ProductActivator>)productActivatorByProductIdentifier:(NSString *)productIdentifier {
+- (id <InAppPurchaseProductActivator>)productActivatorByProductIdentifier:(NSString *)productIdentifier {
     NSArray *result = [productActivators filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"productIdentifier == %@", productIdentifier]];
     return result.count ? [result objectAtIndex:0] : nil;
 }
@@ -157,7 +157,7 @@
 - (BOOL)provideContent:(SKPaymentTransaction *)transaction withProductIdentifier:(NSString *)productIdentifier {
     BOOL result = NO;
 
-    id <ProductActivator> productActivator = [self productActivatorByProductIdentifier:productIdentifier];
+    id <InAppPurchaseProductActivator> productActivator = [self productActivatorByProductIdentifier:productIdentifier];
 
     if (productActivator) {
         BOOL productActivatorResult = [productActivator activateProduct:transaction];

@@ -2,7 +2,7 @@
 
 @class SKPaymentTransaction;
 
-@protocol ProductActivator <NSObject>
+@protocol InAppPurchaseProductActivator <NSObject>
 
 @property (strong, readonly) NSString *productIdentifier;
 

@@ -13,16 +13,16 @@
 #define IN_APP_PURCHASE_STARTED_NOTIFICATION @"InAppPurchaseStarted"
 #define IN_APP_PURCHASE_FINISHED_NOTIFICATION @"InAppPurchaseFinished"
 
-@protocol ProductActivator;
+@protocol InAppPurchaseProductActivator;
 @protocol InAppPurchaseAlertHandler;
 
 @interface InAppPurchaseManager : NSObject
 
 @property (strong) id<InAppPurchaseAlertHandler> alertHandler;
 
-- (void)addProductActivator:(id<ProductActivator>)productHandler;
+- (void)addProductActivator:(id<InAppPurchaseProductActivator>)productHandler;
 
-- (void)removeProductActivator:(id<ProductActivator>)productHandler;
+- (void)removeProductActivator:(id<InAppPurchaseProductActivator>)productHandler;
 
 - (void)updateProducts;
 

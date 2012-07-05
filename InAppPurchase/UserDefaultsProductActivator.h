@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
-#import "ProductActivator.h"
+#import "InAppPurchaseProductActivator.h"
 
-@interface UserDefaultsProductActivator : NSObject <ProductActivator>
+@interface UserDefaultsProductActivator : NSObject <InAppPurchaseProductActivator>
 
 - (id)initWithProductIdentifier:(NSString *)productIdentifier;
 

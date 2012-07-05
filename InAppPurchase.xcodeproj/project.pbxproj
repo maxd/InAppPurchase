@@ -33,7 +33,7 @@
 		093E1C1715A5FA3700D5538A /* UserDefaultsProductActivator.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C0E15A5FA3700D5538A /* UserDefaultsProductActivator.h */; };
 		093E1C1815A5FA3700D5538A /* UserDefaultsProductActivator.m in Sources */ = {isa = PBXBuildFile; fileRef = 093E1C0F15A5FA3700D5538A /* UserDefaultsProductActivator.m */; };
 		093E1C1B15A5FA7C00D5538A /* AlertViewAlertHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C1A15A5FA7C00D5538A /* AlertViewAlertHandler.h */; };
-		093E1C1D15A5FADC00D5538A /* ProductActivator.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C1C15A5FADC00D5538A /* ProductActivator.h */; };
+		093E1C1D15A5FADC00D5538A /* InAppPurchaseProductActivator.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C1C15A5FADC00D5538A /* InAppPurchaseProductActivator.h */; };
 		093E1C2115A5FB5800D5538A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093E1C2015A5FB5800D5538A /* UIKit.framework */; };
 		093E1C2615A5FDFD00D5538A /* InAppPurchase.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C2515A5FDFD00D5538A /* InAppPurchase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		093E1C2915A6066900D5538A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093E1C2815A6066900D5538A /* StoreKit.framework */; };
@@ -63,7 +63,7 @@
 		093E1C0E15A5FA3700D5538A /* UserDefaultsProductActivator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsProductActivator.h; sourceTree = "<group>"; };
 		093E1C0F15A5FA3700D5538A /* UserDefaultsProductActivator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsProductActivator.m; sourceTree = "<group>"; };
 		093E1C1A15A5FA7C00D5538A /* AlertViewAlertHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewAlertHandler.h; sourceTree = "<group>"; };
-		093E1C1C15A5FADC00D5538A /* ProductActivator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductActivator.h; sourceTree = "<group>"; };
+		093E1C1C15A5FADC00D5538A /* InAppPurchaseProductActivator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPurchaseProductActivator.h; sourceTree = "<group>"; };
 		093E1C2015A5FB5800D5538A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		093E1C2515A5FDFD00D5538A /* InAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InAppPurchase.h; path = InAppPurchase/InAppPurchase.h; sourceTree = "<group>"; };
 		093E1C2815A6066900D5538A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -115,7 +115,7 @@
 			children = (
 				093E1C0915A5FA3700D5538A /* InAppPurchaseManager.h */,
 				093E1C0A15A5FA3700D5538A /* InAppPurchaseManager.m */,
-				093E1C1C15A5FADC00D5538A /* ProductActivator.h */,
+				093E1C1C15A5FADC00D5538A /* InAppPurchaseProductActivator.h */,
 				093E1C0815A5FA3700D5538A /* InAppPurchaseAlertHandler.h */,
 				093E1C1F15A5FB1100D5538A /* ProductActivators */,
 				093E1C1E15A5FAFE00D5538A /* Alerts */,
@@ -176,7 +176,7 @@
 				093E1C1515A5FA3700D5538A /* SKProduct+LocalizedPrice.h in Headers */,
 				093E1C1715A5FA3700D5538A /* UserDefaultsProductActivator.h in Headers */,
 				093E1C1B15A5FA7C00D5538A /* AlertViewAlertHandler.h in Headers */,
-				093E1C1D15A5FADC00D5538A /* ProductActivator.h in Headers */,
+				093E1C1D15A5FADC00D5538A /* InAppPurchaseProductActivator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
