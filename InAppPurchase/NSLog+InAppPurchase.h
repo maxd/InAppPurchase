@@ -1,14 +1,14 @@
 #import <Foundation/Foundation.h>
 #import <StoreKit/StoreKit.h>
 
-#pragma unused(SKPaymentTransactionStatesMap)
-
 static char *SKPaymentTransactionStatesMap[] = {
         "SKPaymentTransactionStatePurchasing",
         "SKPaymentTransactionStatePurchased",
         "SKPaymentTransactionStateFailed",
         "SKPaymentTransactionStateRestored"
 };
+
+#pragma unused(SKPaymentTransactionStatesMap)
 
 #define NSLogTransaction(transaction) \
     NSLog(@"Transaction:"); \
