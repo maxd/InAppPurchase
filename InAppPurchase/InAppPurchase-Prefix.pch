@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'InAppPurchase' target in the 'InAppPurchase' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
