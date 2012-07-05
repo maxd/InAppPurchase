@@ -1,11 +1,9 @@
-#import <Foundation/Foundation.h>
+#import <InAppPurchase/InAppPurchaseManager.h>
+#import <InAppPurchase/InAppPurchaseProductActivator.h>
+#import <InAppPurchase/InAppPurchaseAlertHandler.h>
 
-#import <InAppPurchaseManager.h>
-#import <InAppPurchaseProductActivator.h>
-#import <InAppPurchaseAlertHandler.h>
+#import <InAppPurchase/AlertViewAlertHandler.h>
+#import <InAppPurchase/UserDefaultsProductActivator.h>
 
-#import <AlertViewAlertHandler.h>
-#import <UserDefaultsProductActivator.h>
-
-#import <NSLog+InAppPurchase.h>
-#import <SKProduct+LocalizedPrice.h>
+#import <InAppPurchase/NSLog+InAppPurchase.h>
+#import <InAppPurchase/SKProduct+LocalizedPrice.h>

@@ -24,16 +24,16 @@
 /* Begin PBXBuildFile section */
 		093E1BFB15A5EE7F00D5538A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093E1BFA15A5EE7F00D5538A /* Foundation.framework */; };
 		093E1C1015A5FA3700D5538A /* AlertViewAlertHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 093E1C0715A5FA3700D5538A /* AlertViewAlertHandler.m */; };
-		093E1C1115A5FA3700D5538A /* InAppPurchaseAlertHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C0815A5FA3700D5538A /* InAppPurchaseAlertHandler.h */; };
-		093E1C1215A5FA3700D5538A /* InAppPurchaseManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C0915A5FA3700D5538A /* InAppPurchaseManager.h */; };
+		093E1C1115A5FA3700D5538A /* InAppPurchaseAlertHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C0815A5FA3700D5538A /* InAppPurchaseAlertHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		093E1C1215A5FA3700D5538A /* InAppPurchaseManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C0915A5FA3700D5538A /* InAppPurchaseManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		093E1C1315A5FA3700D5538A /* InAppPurchaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 093E1C0A15A5FA3700D5538A /* InAppPurchaseManager.m */; };
-		093E1C1415A5FA3700D5538A /* NSLog+InAppPurchase.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C0B15A5FA3700D5538A /* NSLog+InAppPurchase.h */; };
-		093E1C1515A5FA3700D5538A /* SKProduct+LocalizedPrice.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C0C15A5FA3700D5538A /* SKProduct+LocalizedPrice.h */; };
+		093E1C1415A5FA3700D5538A /* NSLog+InAppPurchase.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C0B15A5FA3700D5538A /* NSLog+InAppPurchase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		093E1C1515A5FA3700D5538A /* SKProduct+LocalizedPrice.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C0C15A5FA3700D5538A /* SKProduct+LocalizedPrice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		093E1C1615A5FA3700D5538A /* SKProduct+LocalizedPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 093E1C0D15A5FA3700D5538A /* SKProduct+LocalizedPrice.m */; };
-		093E1C1715A5FA3700D5538A /* UserDefaultsProductActivator.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C0E15A5FA3700D5538A /* UserDefaultsProductActivator.h */; };
+		093E1C1715A5FA3700D5538A /* UserDefaultsProductActivator.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C0E15A5FA3700D5538A /* UserDefaultsProductActivator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		093E1C1815A5FA3700D5538A /* UserDefaultsProductActivator.m in Sources */ = {isa = PBXBuildFile; fileRef = 093E1C0F15A5FA3700D5538A /* UserDefaultsProductActivator.m */; };
-		093E1C1B15A5FA7C00D5538A /* AlertViewAlertHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C1A15A5FA7C00D5538A /* AlertViewAlertHandler.h */; };
-		093E1C1D15A5FADC00D5538A /* InAppPurchaseProductActivator.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C1C15A5FADC00D5538A /* InAppPurchaseProductActivator.h */; };
+		093E1C1B15A5FA7C00D5538A /* AlertViewAlertHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C1A15A5FA7C00D5538A /* AlertViewAlertHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		093E1C1D15A5FADC00D5538A /* InAppPurchaseProductActivator.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C1C15A5FADC00D5538A /* InAppPurchaseProductActivator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		093E1C2115A5FB5800D5538A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093E1C2015A5FB5800D5538A /* UIKit.framework */; };
 		093E1C2615A5FDFD00D5538A /* InAppPurchase.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C2515A5FDFD00D5538A /* InAppPurchase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		093E1C2915A6066900D5538A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093E1C2815A6066900D5538A /* StoreKit.framework */; };
@@ -170,13 +170,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				093E1C2615A5FDFD00D5538A /* InAppPurchase.h in Headers */,
-				093E1C1115A5FA3700D5538A /* InAppPurchaseAlertHandler.h in Headers */,
 				093E1C1215A5FA3700D5538A /* InAppPurchaseManager.h in Headers */,
+				093E1C1D15A5FADC00D5538A /* InAppPurchaseProductActivator.h in Headers */,
+				093E1C1115A5FA3700D5538A /* InAppPurchaseAlertHandler.h in Headers */,
 				093E1C1415A5FA3700D5538A /* NSLog+InAppPurchase.h in Headers */,
 				093E1C1515A5FA3700D5538A /* SKProduct+LocalizedPrice.h in Headers */,
 				093E1C1715A5FA3700D5538A /* UserDefaultsProductActivator.h in Headers */,
 				093E1C1B15A5FA7C00D5538A /* AlertViewAlertHandler.h in Headers */,
-				093E1C1D15A5FADC00D5538A /* InAppPurchaseProductActivator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +385,7 @@
 				093E1C0615A5EE7F00D5538A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		093E1C2B15A6086700D5538A /* Build configuration list for PBXAggregateTarget "Framework" */ = {
 			isa = XCConfigurationList;
@@ -393,6 +394,7 @@
 				093E1C2D15A6086700D5538A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
