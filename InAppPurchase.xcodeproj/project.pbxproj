@@ -14,6 +14,7 @@
 				093E1C3015A6088F00D5538A /* ShellScript */,
 			);
 			dependencies = (
+				093E1CF315A62F5600D5538A /* PBXTargetDependency */,
 				093E1C2F15A6087200D5538A /* PBXTargetDependency */,
 			);
 			name = Framework;
@@ -37,6 +38,11 @@
 		093E1C2115A5FB5800D5538A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093E1C2015A5FB5800D5538A /* UIKit.framework */; };
 		093E1C2615A5FDFD00D5538A /* InAppPurchase.h in Headers */ = {isa = PBXBuildFile; fileRef = 093E1C2515A5FDFD00D5538A /* InAppPurchase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		093E1C2915A6066900D5538A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093E1C2815A6066900D5538A /* StoreKit.framework */; };
+		093E1CDD15A62E0200D5538A /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093E1CDC15A62E0200D5538A /* CoreFoundation.framework */; };
+		093E1CEA15A62F1200D5538A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 093E1CE815A62F1200D5538A /* Localizable.strings */; };
+		093E1CF115A62F3100D5538A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 093E1CE815A62F1200D5538A /* Localizable.strings */; };
+		0953E0A315A76E42003716A6 /* Localization.h in Headers */ = {isa = PBXBuildFile; fileRef = 0953E0A115A76E42003716A6 /* Localization.h */; };
+		0953E0A415A76E42003716A6 /* Localization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0953E0A215A76E42003716A6 /* Localization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 093E1BF615A5EE7F00D5538A;
 			remoteInfo = InAppPurchase;
+		};
+		093E1CF215A62F5600D5538A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 093E1BEE15A5EE7F00D5538A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 093E1CDA15A62E0200D5538A;
+			remoteInfo = InAppPurchaseResources;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -67,6 +80,12 @@
 		093E1C2015A5FB5800D5538A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		093E1C2515A5FDFD00D5538A /* InAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InAppPurchase.h; path = InAppPurchase/InAppPurchase.h; sourceTree = "<group>"; };
 		093E1C2815A6066900D5538A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		093E1CDB15A62E0200D5538A /* InAppPurchase.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InAppPurchase.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		093E1CDC15A62E0200D5538A /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		093E1CE915A62F1200D5538A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		093E1CEE15A62F2900D5538A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0953E0A115A76E42003716A6 /* Localization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Localization.h; sourceTree = "<group>"; };
+		0953E0A215A76E42003716A6 /* Localization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Localization.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +99,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		093E1CD815A62E0200D5538A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				093E1CDD15A62E0200D5538A /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -87,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				093E1BFC15A5EE7F00D5538A /* InAppPurchase */,
+				093E1CDE15A62E0200D5538A /* InAppPurchaseResources */,
 				093E1BF915A5EE7F00D5538A /* Frameworks */,
 				093E1BF815A5EE7F00D5538A /* Products */,
 			);
@@ -96,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				093E1BF715A5EE7F00D5538A /* libInAppPurchase.a */,
+				093E1CDB15A62E0200D5538A /* InAppPurchase.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +135,7 @@
 				093E1BFA15A5EE7F00D5538A /* Foundation.framework */,
 				093E1C2015A5FB5800D5538A /* UIKit.framework */,
 				093E1C2815A6066900D5538A /* StoreKit.framework */,
+				093E1CDC15A62E0200D5538A /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,6 +170,8 @@
 				093E1C0B15A5FA3700D5538A /* NSLog+InAppPurchase.h */,
 				093E1C0C15A5FA3700D5538A /* SKProduct+LocalizedPrice.h */,
 				093E1C0D15A5FA3700D5538A /* SKProduct+LocalizedPrice.m */,
+				0953E0A115A76E42003716A6 /* Localization.h */,
+				0953E0A215A76E42003716A6 /* Localization.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -162,6 +194,22 @@
 			name = ProductActivators;
 			sourceTree = "<group>";
 		};
+		093E1CDE15A62E0200D5538A /* InAppPurchaseResources */ = {
+			isa = PBXGroup;
+			children = (
+				093E1CDF15A62E0200D5538A /* Supporting Files */,
+			);
+			path = InAppPurchaseResources;
+			sourceTree = "<group>";
+		};
+		093E1CDF15A62E0200D5538A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				093E1CE815A62F1200D5538A /* Localizable.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -177,6 +225,7 @@
 				093E1C1515A5FA3700D5538A /* SKProduct+LocalizedPrice.h in Headers */,
 				093E1C1715A5FA3700D5538A /* UserDefaultsProductActivator.h in Headers */,
 				093E1C1B15A5FA7C00D5538A /* AlertViewAlertHandler.h in Headers */,
+				0953E0A315A76E42003716A6 /* Localization.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +250,23 @@
 			productReference = 093E1BF715A5EE7F00D5538A /* libInAppPurchase.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		093E1CDA15A62E0200D5538A /* InAppPurchaseResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 093E1CE515A62E0200D5538A /* Build configuration list for PBXNativeTarget "InAppPurchaseResources" */;
+			buildPhases = (
+				093E1CD715A62E0200D5538A /* Sources */,
+				093E1CD815A62E0200D5538A /* Frameworks */,
+				093E1CD915A62E0200D5538A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InAppPurchaseResources;
+			productName = InAppPurchaseResources;
+			productReference = 093E1CDB15A62E0200D5538A /* InAppPurchase.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -216,6 +282,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ru,
 			);
 			mainGroup = 093E1BEC15A5EE7F00D5538A;
 			productRefGroup = 093E1BF815A5EE7F00D5538A /* Products */;
@@ -224,9 +291,22 @@
 			targets = (
 				093E1BF615A5EE7F00D5538A /* InAppPurchase */,
 				093E1C2A15A6086700D5538A /* Framework */,
+				093E1CDA15A62E0200D5538A /* InAppPurchaseResources */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		093E1CD915A62E0200D5538A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				093E1CEA15A62F1200D5538A /* Localizable.strings in Resources */,
+				093E1CF115A62F3100D5538A /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		093E1C2715A5FEBB00D5538A /* ShellScript */ = {
@@ -266,6 +346,14 @@
 				093E1C1315A5FA3700D5538A /* InAppPurchaseManager.m in Sources */,
 				093E1C1615A5FA3700D5538A /* SKProduct+LocalizedPrice.m in Sources */,
 				093E1C1815A5FA3700D5538A /* UserDefaultsProductActivator.m in Sources */,
+				0953E0A415A76E42003716A6 /* Localization.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		093E1CD715A62E0200D5538A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +365,24 @@
 			target = 093E1BF615A5EE7F00D5538A /* InAppPurchase */;
 			targetProxy = 093E1C2E15A6087200D5538A /* PBXContainerItemProxy */;
 		};
+		093E1CF315A62F5600D5538A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 093E1CDA15A62E0200D5538A /* InAppPurchaseResources */;
+			targetProxy = 093E1CF215A62F5600D5538A /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		093E1CE815A62F1200D5538A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				093E1CE915A62F1200D5538A /* en */,
+				093E1CEE15A62F2900D5538A /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		093E1C0215A5EE7F00D5538A /* Debug */ = {
@@ -366,6 +471,34 @@
 			};
 			name = Release;
 		};
+		093E1CE615A62E0200D5538A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InAppPurchaseResources/InAppPurchaseResources-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = InAppPurchase;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		093E1CE715A62E0200D5538A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InAppPurchaseResources/InAppPurchaseResources-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = InAppPurchase;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -392,6 +525,15 @@
 			buildConfigurations = (
 				093E1C2C15A6086700D5538A /* Debug */,
 				093E1C2D15A6086700D5538A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		093E1CE515A62E0200D5538A /* Build configuration list for PBXNativeTarget "InAppPurchaseResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				093E1CE615A62E0200D5538A /* Debug */,
+				093E1CE715A62E0200D5538A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

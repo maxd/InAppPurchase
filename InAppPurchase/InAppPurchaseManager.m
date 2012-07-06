@@ -77,7 +77,7 @@
                               object:nil];
     } else {
         NSLog(@"[InAppPurchase] %@ Can't find product identifier in updated products. Possible updateProducts method isn't called.", productIdentifier);
-        [self.alertHandler showError:@"Покупаемый товар не найден. Обратитесь в службу поддержки приложения."];
+        [self.alertHandler showError:L(@"product-not-found")];
     }
 }
 
@@ -92,7 +92,7 @@
             NSLog(@"[InAppPurchase] -  * %@", productIdentifier);
         }
 
-        [self.alertHandler showWarning:@"Некоторые из продуктов не зарегистрированы или сняты с продажи. Обратитесь в службу поддержки приложения."];
+        [self.alertHandler showWarning:L(@"invalid-products")];
     }
 
     [[NSNotificationCenter defaultCenter]
@@ -102,7 +102,7 @@
 
 - (void)request:(SKRequest *)request didFailWithError:(NSError *)error {
     NSLog(@"[InAppPurchase] - Can't update products from iTunesConnect: %@", error);
-    [self.alertHandler showError:[NSString stringWithFormat:@"Невозможно получить список продуктов. %@.", error.localizedDescription]];
+    [self.alertHandler showError:[NSString stringWithFormat:L(@"product-list-unavailable"), error.localizedDescription]];
 
     [[NSNotificationCenter defaultCenter]
             postNotificationName:IN_APP_PURCHASE_PRODUCTS_UPDATE_FAILED_NOTIFICATION
@@ -166,11 +166,11 @@
             result = YES;
         } else {
             NSLog(@"[InAppPurchase] %@ Can't activate purchased product.", productIdentifier);
-            [self.alertHandler showError:@"Не удалось активировать купленный продукт. Обратитесь в службу поддержки приложения."];
+            [self.alertHandler showError:L(@"can-not-activate-product")];
         }
     } else {
         NSLog(@"[InAppPurchase] %@ Can't find product activator.", productIdentifier);
-        [self.alertHandler showError:@"Не удалось найти обработчик купленного продукта. Обратитесь в службу поддержки приложения."];
+        [self.alertHandler showError:L(@"product-activator-not-found")];
     }
 
     return result;
@@ -195,7 +195,7 @@
                 break;
             case SKErrorClientInvalid:       // client is not allowed to issue the request, etc.
                 NSLog(@"[InAppPurchase] %@ Client is not allowed to perform purchase request.", productIdentifier);
-                [self.alertHandler showError:@"Покупка запрещена. Обратитесь в службу поддержки приложения."];
+                [self.alertHandler showError:L(@"client-invalid-error")];
                 break;
             case SKErrorPaymentCancelled:    // user cancelled the request, etc.
                 NSLog(@"[InAppPurchase] %@ Purchase canceled.", productIdentifier);
@@ -203,11 +203,11 @@
                 break;
             case SKErrorPaymentInvalid:      // purchase identifier was invalid, etc.
                 NSLog(@"[InAppPurchase] %@ Purchase identifier was invalid.", productIdentifier);
-                [self.alertHandler showError:@"Невозможно купить незарегистрированный или снятый с продажи продукт. Обратитесь в службу поддержки приложения."];
+                [self.alertHandler showError:L(@"payment-invalid-error")];
                 break;
             case SKErrorPaymentNotAllowed:   // this device is not allowed to make the payment
                 NSLog(@"[InAppPurchase] %@ This device is not allowed to make the payment.", productIdentifier);
-                [self.alertHandler showError:@"Покупка запрещена на устройстве. Обратитесь в службу поддержки приложения."];
+                [self.alertHandler showError:L(@"payment-not-allowed-error")];
                 break;
         }
 

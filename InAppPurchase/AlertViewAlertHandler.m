@@ -4,11 +4,11 @@
 @implementation AlertViewAlertHandler
 
 - (void)showWarning:(NSString *)message {
-    [self showAlert:message withTitle:@"Предупреждение"];
+    [self showAlert:message withTitle:L(@"warning-alert-title")];
 }
 
 - (void)showError:(NSString *)message {
-    [self showAlert:message withTitle:@"Ошибка"];
+    [self showAlert:message withTitle:L(@"error-alert-title")];
 }
 
 - (void)showAlert:(NSString *)message withTitle:(NSString *)title {
@@ -16,7 +16,7 @@
             initWithTitle:title
                   message:message
                  delegate:nil
-        cancelButtonTitle:@"Закрыть"
+        cancelButtonTitle:L(@"close")
         otherButtonTitles:nil];
 
     [alertView show];
