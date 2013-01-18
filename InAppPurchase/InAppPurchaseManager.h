@@ -30,6 +30,8 @@
 
 - (void)purchaseProduct:(NSString *)productIdentifier;
 
+- (void)restorePurchases;
+
 - (SKProduct *)productByIdentifier:(NSString *)productIdentifier;
 
 @end

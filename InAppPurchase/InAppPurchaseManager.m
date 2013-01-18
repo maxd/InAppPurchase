@@ -81,6 +81,14 @@
     }
 }
 
+- (void)restorePurchases {
+    [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
+
+    [[NSNotificationCenter defaultCenter]
+            postNotificationName:IN_APP_PURCHASE_STARTED_NOTIFICATION
+                          object:nil];
+}
+
 #pragma mark SKRequest Handlers
 
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response {
