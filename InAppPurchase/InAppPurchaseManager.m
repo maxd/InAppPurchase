@@ -229,4 +229,24 @@
                           object:nil];
 }
 
+- (void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue {
+    [[NSNotificationCenter defaultCenter]
+            postNotificationName:IN_APP_PURCHASE_RESTORE_SUCCESS_NOTIFICATION
+                          object:nil];
+
+    [[NSNotificationCenter defaultCenter]
+            postNotificationName:IN_APP_PURCHASE_FINISHED_NOTIFICATION
+                          object:nil];
+}
+
+- (void)paymentQueue:(SKPaymentQueue *)queue restoreCompletedTransactionsFailedWithError:(NSError *)error {
+    [[NSNotificationCenter defaultCenter]
+            postNotificationName:IN_APP_PURCHASE_RESTORE_FAIL_NOTIFICATION
+                          object:nil];
+
+    [[NSNotificationCenter defaultCenter]
+            postNotificationName:IN_APP_PURCHASE_FINISHED_NOTIFICATION
+                          object:nil];
+}
+
 @end
