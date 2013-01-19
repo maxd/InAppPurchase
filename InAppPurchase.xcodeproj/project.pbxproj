@@ -40,7 +40,6 @@
 		093E1C2915A6066900D5538A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093E1C2815A6066900D5538A /* StoreKit.framework */; };
 		093E1CDD15A62E0200D5538A /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093E1CDC15A62E0200D5538A /* CoreFoundation.framework */; };
 		093E1CEA15A62F1200D5538A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 093E1CE815A62F1200D5538A /* Localizable.strings */; };
-		093E1CF115A62F3100D5538A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 093E1CE815A62F1200D5538A /* Localizable.strings */; };
 		0953E0A315A76E42003716A6 /* Localization.h in Headers */ = {isa = PBXBuildFile; fileRef = 0953E0A115A76E42003716A6 /* Localization.h */; };
 		0953E0A415A76E42003716A6 /* Localization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0953E0A215A76E42003716A6 /* Localization.m */; };
 /* End PBXBuildFile section */
@@ -273,7 +272,7 @@
 		093E1BEE15A5EE7F00D5538A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = Protonail;
 			};
 			buildConfigurationList = 093E1BF115A5EE7F00D5538A /* Build configuration list for PBXProject "InAppPurchase" */;
@@ -302,7 +301,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				093E1CEA15A62F1200D5538A /* Localizable.strings in Resources */,
-				093E1CF115A62F3100D5538A /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
