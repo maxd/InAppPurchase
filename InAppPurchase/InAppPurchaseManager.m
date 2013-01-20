@@ -215,6 +215,11 @@
                 NSLog(@"[InAppPurchase] %@ This device is not allowed to make the payment.", productIdentifier);
                 [_alertHandler showError:L(@"payment-not-allowed-error")];
                 break;
+            default:
+                NSLog(@"[InAppPurchase] %@ Unknown error code. Error: %@", productIdentifier, transaction.error);
+                [_alertHandler showError:[NSString stringWithFormat:@"%@.", transaction.error.localizedDescription]];
+                [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+                break;
         }
 
         [[NSNotificationCenter defaultCenter]
