@@ -2,7 +2,6 @@
 #import "InAppPurchaseManager.h"
 #import "InAppPurchaseProductActivator.h"
 #import "InAppPurchaseAlertHandler.h"
-#import "AlertViewAlertHandler.h"
 
 @interface InAppPurchaseManager () <SKPaymentTransactionObserver, SKProductsRequestDelegate> {
     NSMutableArray *productActivators;
@@ -18,13 +17,12 @@
 
 @synthesize alertHandler = _alertHandler;
 
-
-- (id)init {
+- (id)initWithAlertHandler:(id<InAppPurchaseAlertHandler>)alertHandler {
     self = [super init];
     if (self) {
         productActivators = [NSMutableArray new];
 
-        self.alertHandler = [AlertViewAlertHandler new];
+        _alertHandler = alertHandler;
 
         [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
     }
@@ -77,7 +75,7 @@
                               object:nil];
     } else {
         NSLog(@"[InAppPurchase] %@ Can't find product identifier in updated products. Possible updateProducts method isn't called.", productIdentifier);
-        [self.alertHandler showError:L(@"product-not-found")];
+        [_alertHandler showError:L(@"product-not-found")];
     }
 }
 
@@ -100,7 +98,7 @@
             NSLog(@"[InAppPurchase] -  * %@", productIdentifier);
         }
 
-        [self.alertHandler showWarning:L(@"invalid-products")];
+        [_alertHandler showWarning:L(@"invalid-products")];
     }
 
     [[NSNotificationCenter defaultCenter]
@@ -110,7 +108,7 @@
 
 - (void)request:(SKRequest *)request didFailWithError:(NSError *)error {
     NSLog(@"[InAppPurchase] - Can't update products from iTunesConnect: %@", error);
-    [self.alertHandler showError:[NSString stringWithFormat:L(@"product-list-unavailable"), error.localizedDescription]];
+    [_alertHandler showError:[NSString stringWithFormat:L(@"product-list-unavailable"), error.localizedDescription]];
 
     [[NSNotificationCenter defaultCenter]
             postNotificationName:IN_APP_PURCHASE_PRODUCTS_UPDATE_FAILED_NOTIFICATION
@@ -174,11 +172,11 @@
             result = YES;
         } else {
             NSLog(@"[InAppPurchase] %@ Can't activate purchased product.", productIdentifier);
-            [self.alertHandler showError:L(@"can-not-activate-product")];
+            [_alertHandler showError:L(@"can-not-activate-product")];
         }
     } else {
         NSLog(@"[InAppPurchase] %@ Can't find product activator.", productIdentifier);
-        [self.alertHandler showError:L(@"product-activator-not-found")];
+        [_alertHandler showError:L(@"product-activator-not-found")];
     }
 
     return result;
@@ -198,12 +196,12 @@
         switch (transaction.error.code) {
             case SKErrorUnknown:
                 NSLog(@"[InAppPurchase] %@ Unknown error: %@", productIdentifier, transaction.error);
-                [self.alertHandler showError:[NSString stringWithFormat:@"%@.", transaction.error.localizedDescription]];
+                [_alertHandler showError:[NSString stringWithFormat:@"%@.", transaction.error.localizedDescription]];
                 [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
                 break;
             case SKErrorClientInvalid:       // client is not allowed to issue the request, etc.
                 NSLog(@"[InAppPurchase] %@ Client is not allowed to perform purchase request.", productIdentifier);
-                [self.alertHandler showError:L(@"client-invalid-error")];
+                [_alertHandler showError:L(@"client-invalid-error")];
                 break;
             case SKErrorPaymentCancelled:    // user cancelled the request, etc.
                 NSLog(@"[InAppPurchase] %@ Purchase canceled.", productIdentifier);
@@ -211,11 +209,11 @@
                 break;
             case SKErrorPaymentInvalid:      // purchase identifier was invalid, etc.
                 NSLog(@"[InAppPurchase] %@ Purchase identifier was invalid.", productIdentifier);
-                [self.alertHandler showError:L(@"payment-invalid-error")];
+                [_alertHandler showError:L(@"payment-invalid-error")];
                 break;
             case SKErrorPaymentNotAllowed:   // this device is not allowed to make the payment
                 NSLog(@"[InAppPurchase] %@ This device is not allowed to make the payment.", productIdentifier);
-                [self.alertHandler showError:L(@"payment-not-allowed-error")];
+                [_alertHandler showError:L(@"payment-not-allowed-error")];
                 break;
         }
 

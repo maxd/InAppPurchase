@@ -21,7 +21,9 @@
 
 @interface InAppPurchaseManager : NSObject
 
-@property (strong) id<InAppPurchaseAlertHandler> alertHandler;
+@property (strong, readonly) id<InAppPurchaseAlertHandler> alertHandler;
+
+- (id)initWithAlertHandler:(id<InAppPurchaseAlertHandler>)alertHandler;
 
 - (void)addProductActivator:(id<InAppPurchaseProductActivator>)productHandler;
 
